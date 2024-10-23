@@ -251,7 +251,7 @@ export default definePlugin({
             if (!trackData?.["@attr"]?.nowplaying) {
                 if (!settings.store.ignoreLastFmNowPlayingTag)
                     return null;
-                if (settings.store.ignoreLastFmNowPlayingTag && Math.floor(Date.now() / 1000) - trackData.date?.["@attr"]?.utc > 5 * 60)
+                if (settings.store.ignoreLastFmNowPlayingTag && Math.floor(Date.now() / 1000) - trackData.date.uts > 5 * 60)
                     return null;
             }
 
